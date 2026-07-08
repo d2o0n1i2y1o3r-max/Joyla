@@ -14,11 +14,13 @@
       "detecting": "Определение местоположения...",
       "allowLocation": "Пожалуйста, разрешите доступ к местоположению",
       "selectCity": "Выберите город",
-      "currentLocation": "Текущее местоположение"
+      "currentLocation": "Текущее местоположение",
+      "nearest": "Ближайший"
     },
     "categories": {
       "all": "Все",
       "nature": "Природа",
+      "wellness": "Здоровье и Отдых",
       "historical": "Исторические/Культурные",
       "restaurants": "Рестораны/Кафе",
       "entertainment": "Развлечения"

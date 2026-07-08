@@ -14,11 +14,13 @@
       "detecting": "Joylashuv aniqlanmoqda...",
       "allowLocation": "Iltimos, joylashuvga ruxsat bering",
       "selectCity": "Shaharni tanlang",
-      "currentLocation": "Hozirgi joylashuv"
+      "currentLocation": "Hozirgi joylashuv",
+      "nearest": "Eng yaqini"
     },
     "categories": {
       "all": "Barchasi",
       "nature": "Tabiat",
+      "wellness": "Sog'lik va Dam Olish",
       "historical": "Tarixiy/Madaniy",
       "restaurants": "Restoranlar/Kafelar",
       "entertainment": "Ko'ngilochar"

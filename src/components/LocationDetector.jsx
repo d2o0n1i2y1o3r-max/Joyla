@@ -30,11 +30,41 @@ const LocationDetector = () => {
   const { location, manualCity, isLoading, setLocation, setManualCity, setLoading, setError } = useLocationStore();
   const [selectedCity, setSelectedCity] = useState('');
 
+  // Initialize selectedCity from store state
+  useEffect(() => {
+    if (manualCity) {
+      setSelectedCity(manualCity.name);
+    } else if (location) {
+      // Find nearest city to current location
+      const nearestCity = findNearestCity(location.lat, location.lng);
+      if (nearestCity) {
+        setSelectedCity(nearestCity.name);
+      }
+    }
+  }, [location, manualCity]);
+
   useEffect(() => {
     if (!location && !manualCity) {
       detectLocation();
     }
   }, []);
+
+  const findNearestCity = (lat, lng) => {
+    let nearest = null;
+    let minDistance = Infinity;
+    
+    UZBEKISTAN_CITIES.forEach(city => {
+      const distance = Math.sqrt(
+        Math.pow(lat - city.lat, 2) + Math.pow(lng - city.lng, 2)
+      );
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearest = city;
+      }
+    });
+    
+    return nearest;
+  };
 
   const detectLocation = () => {
     setLoading(true);
@@ -50,6 +80,14 @@ const LocationDetector = () => {
       (position) => {
         const { latitude, longitude } = position.coords;
         setLocation({ lat: latitude, lng: longitude });
+        
+        // Find and select nearest city
+        const nearestCity = findNearestCity(latitude, longitude);
+        if (nearestCity) {
+          setSelectedCity(nearestCity.name);
+          setManualCity({ lat: nearestCity.lat, lng: nearestCity.lng, name: nearestCity.name });
+        }
+        
         setLoading(false);
       },
       (error) => {
@@ -69,10 +107,18 @@ const LocationDetector = () => {
     const cityName = e.target.value;
     setSelectedCity(cityName);
     
+    if (cityName === 'nearest') {
+      // "Eng yaqini" - trigger geolocation
+      detectLocation();
+      return;
+    }
+    
     if (cityName) {
       const city = UZBEKISTAN_CITIES.find(c => c.name === cityName);
       if (city) {
         setManualCity({ lat: city.lat, lng: city.lng, name: city.name });
+        // Clear geolocation location when manually selecting a city
+        setLocation(null);
       }
     } else {
       setManualCity(null);
@@ -149,6 +195,7 @@ const LocationDetector = () => {
           onChange={handleCityChange}
           className="select select-sm select-bordered"
         >
+          <option value="nearest">{t('location.nearest')}</option>
           <option value="">{t('location.selectCity')}</option>
           {UZBEKISTAN_CITIES.map((city) => (
             <option key={city.name} value={city.name}>

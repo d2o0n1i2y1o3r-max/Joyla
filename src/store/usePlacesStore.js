@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export const usePlacesStore = create((set) => ({
+export const usePlacesStore = create((set, get) => ({
   places: [],
   filteredPlaces: [],
   selectedCategory: 'all',
@@ -12,7 +12,8 @@ export const usePlacesStore = create((set) => ({
   setSelectedCategory: (category) => set({ selectedCategory: category }),
   setLoading: (isLoading) => set({ isLoading }),
   setError: (error) => set({ error }),
-  filterByCategory: (category, places) => {
+  filterByCategory: (category) => {
+    const { places } = get();
     if (category === 'all') {
       set({ filteredPlaces: places, selectedCategory: category });
     } else {
@@ -22,11 +23,21 @@ export const usePlacesStore = create((set) => ({
       });
     }
   },
-  searchPlaces: (query, places) => {
+  searchPlaces: (query) => {
+    const { places } = get();
+    console.log('[Store] searchPlaces called with query:', query);
+    console.log('[Store] places count:', places.length);
+    
+    if (!query.trim()) {
+      set({ filteredPlaces: places });
+      return;
+    }
+    
     const filtered = places.filter(place =>
       place.name.toLowerCase().includes(query.toLowerCase()) ||
       place.city.toLowerCase().includes(query.toLowerCase())
     );
+    console.log('[Store] filtered count:', filtered.length);
     set({ filteredPlaces });
   },
 }));

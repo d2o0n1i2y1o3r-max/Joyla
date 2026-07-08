@@ -4,6 +4,7 @@ import { usePlacesStore } from '../store/usePlacesStore';
 const CATEGORIES = [
   { id: 'all', icon: '🌍', color: 'neutral' },
   { id: 'nature', icon: '🌳', color: 'success' },
+  { id: 'wellness', icon: '♨️', color: 'secondary' },
   { id: 'historical', icon: '🏛️', color: 'warning' },
   { id: 'restaurants', icon: '🍽️', color: 'error' },
   { id: 'entertainment', icon: '🎭', color: 'info' },
@@ -14,7 +15,7 @@ const CategoryFilter = () => {
   const { selectedCategory, filterByCategory, places } = usePlacesStore();
 
   const handleCategoryChange = (category) => {
-    filterByCategory(category, places);
+    filterByCategory(category);
   };
 
   return (

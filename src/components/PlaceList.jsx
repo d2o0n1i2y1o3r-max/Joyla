@@ -20,6 +20,8 @@ const PlaceList = () => {
   const { filteredPlaces, isLoading } = usePlacesStore();
   const { location, manualCity } = useLocationStore();
 
+  console.log('[PlaceList] Rendering with filteredPlaces:', filteredPlaces.map(p => p.name));
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">

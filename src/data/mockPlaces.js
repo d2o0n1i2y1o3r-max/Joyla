@@ -9,7 +9,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.5,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXKV90H5qlw4O4vhRvj_qHSc-kUHy1Nv26qC6En-K_PQ&s=10',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const mockPlaces = [
     lng: 69.2667,
     rating: 4.2,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlkJN2v4He5YyvzEL7BXfXv1s672b9Z5ff-A2VaMTqZg&s=10',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const mockPlaces = [
     lng: 69.2500,
     rating: 4.7,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400',
+    photo: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAH0CWnym2g8-wgfPsBVatB7m1coBn6E-PhzW97DY1hS02fYJDec_Dos5UO0Myg2laoLmNa210kE3YNInbpuxMCGKCkT2IjeGJvhJvvIdt4CmQKa3Ah_FfAS2lTM2MEiueg5Y0xEFQ=w270-h312-n-k-no',
   },
   // Tashkent - Historical
   {
@@ -43,7 +43,7 @@ export const mockPlaces = [
     lng: 69.2667,
     rating: 4.8,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtGDywCkgj3wMsG-xMCAKWx99_wJZ9yUsSbivxhQJwVQ&s=10',
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ export const mockPlaces = [
     lng: 69.2667,
     rating: 4.6,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCinTwSAAbTR_qOweuy2D_jVR6FarU3z2TAhLuDuamtA&s=10',
   },
   {
     id: 6,
@@ -65,7 +65,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJDFGVo8fa-7NTVvNVBlHH0TEueTK2VyD3X-xa12VjQ&s=10',
   },
   // Tashkent - Restaurants
   {
@@ -77,7 +77,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.7,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvtYbrbtaxHxO2R2jF4Nn0C5ooR84EXp-c9wrvdhmdbg&s=10',
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ export const mockPlaces = [
     lng: 69.2667,
     rating: 4.4,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDLekkw2Rozrv9PBvODDFvN6Uu3UnbCwiRz_ELjtZDZg&s=10',
   },
   {
     id: 9,
@@ -99,7 +99,7 @@ export const mockPlaces = [
     lng: 69.2500,
     rating: 4.3,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfKJ3h9TwUk0G0ezVCxmFOYRgwOLQMR54UjITMLPnVQ&s=10',
   },
   // Tashkent - Entertainment
   {
@@ -111,7 +111,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.5,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1561489413-985b06da5bee?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPlyTbcSokSFijU-OD11nCvoidM3PCwHnS_qpJ3_w23g&s=10',
   },
   {
     id: 11,
@@ -122,7 +122,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.6,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwaZlz3APdw908O5usxioe_yVxXTrROXhCrj0jPf2Kpg&s=10',
   },
   // Samarkand - Historical
   {
@@ -134,7 +134,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvB_AkCwnHWLIRNm3jIzDpxd1pHg9UmSwJfVGxntnTRg&s=10',
   },
   {
     id: 13,
@@ -145,7 +145,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.8,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEdW05kpPB5OyPOZ4tm7jnQr1OPOmEQuqpx-SdkPqH5A&s=10',
   },
   {
     id: 14,
@@ -156,7 +156,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnn_mtnFXpJoad43t1BmZMiOyMr3JO9qdJxaYQeDSVw&s=10',
   },
   // Samarkand - Nature
   {
@@ -168,7 +168,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.3,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYCbF6t_fK5f1R1kOclO5ZIRP74dpJppNWbNKT0QIlFw&s=10',
   },
   // Bukhara - Historical
   {
@@ -180,7 +180,7 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.8,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKnpYKzLjrnnaceNpMWKH-kLk5u75hDqYmZTr3Kst9DA&s=10',
   },
   {
     id: 17,
@@ -191,7 +191,7 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.7,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROe5WWqMxojtZdFQIGLRUSzRY3KhqfoasNsIvCzAQ91A&s=10',
   },
   {
     id: 18,
@@ -202,7 +202,7 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.6,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkVgfCYGFLc94q0C3atBjGmRFx2ZVIk1Ciy7ONbI7htg&s=10',
   },
   // Bukhara - Restaurants
   {
@@ -214,7 +214,7 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.4,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRugPkQOkK1mfexB-vXSwhKfXO24J0qGuK9IjM4tWKVWg&s=10',
   },
   // Khiva - Historical
   {
@@ -226,7 +226,7 @@ export const mockPlaces = [
     lng: 60.3636,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSYmEGiyuSSyQ6xB1HNTbIUYntLpBs5_bz5RhA24vFng&s=10',
   },
   {
     id: 21,
@@ -237,7 +237,7 @@ export const mockPlaces = [
     lng: 60.3636,
     rating: 4.7,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbALs3NYs3g_HW6ZjEVusKeqwbk0F5ogMEBuav2bMklg&s=10',
   },
   // Fergana - Nature
   {
@@ -249,7 +249,7 @@ export const mockPlaces = [
     lng: 71.7845,
     rating: 4.2,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0PQ64Mukz-ujZmUw7RuMp153_iDTMo0T3_zowTW29qg&s=10',
   },
   // Namangan - Entertainment
   {
@@ -261,7 +261,7 @@ export const mockPlaces = [
     lng: 71.6726,
     rating: 4.3,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1561489413-985b06da5bee?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTozCVnKbhA1tO2D6HJrP3FO5JOg7d7j4PmvhY6PvxdSQ&s=10',
   },
   // Andijan - Historical
   {
@@ -273,7 +273,7 @@ export const mockPlaces = [
     lng: 72.3442,
     rating: 4.5,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHw5R_8cdpbLA7J2QqUs3nNRytQ_Cx6dHp9MlIjdejuw&s=10',
   },
   // Karshi - Nature
   {
@@ -285,6 +285,6 @@ export const mockPlaces = [
     lng: 65.7896,
     rating: 4.1,
     isOpen: true,
-    photo: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQImry_fsQmoJ-4dGGJzaWsJqHedjGKiorwNWzBSAlJfQ&s=10',
   },
 ];

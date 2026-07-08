@@ -4,18 +4,22 @@ import { usePlacesStore } from '../store/usePlacesStore';
 
 const SearchBar = () => {
   const { t } = useTranslation();
-  const { searchPlaces, places } = usePlacesStore();
+  const { searchPlaces } = usePlacesStore();
   const [query, setQuery] = useState('');
 
   const handleSearch = (e) => {
     const value = e.target.value;
     setQuery(value);
-    searchPlaces(value, places);
+    searchPlaces(value);
   };
 
   const handleClear = () => {
     setQuery('');
-    searchPlaces('', places);
+    searchPlaces('');
+  };
+
+  const handleSearchSubmit = () => {
+    searchPlaces(query);
   };
 
   return (
@@ -50,7 +54,7 @@ const SearchBar = () => {
             </svg>
           </button>
         )}
-        <button className="btn btn-primary join-item">
+        <button onClick={handleSearchSubmit} className="btn btn-primary join-item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
