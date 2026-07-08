@@ -1,0 +1,63 @@
+{
+  "translation": {
+    "app": {
+      "name": "Joyla",
+      "tagline": "Qiziqarli joylarni kashf eting"
+    },
+    "nav": {
+      "home": "Bosh sahifa",
+      "map": "Xarita",
+      "favorites": "Sevimlilar",
+      "settings": "Sozlamalar"
+    },
+    "location": {
+      "detecting": "Joylashuv aniqlanmoqda...",
+      "allowLocation": "Iltimos, joylashuvga ruxsat bering",
+      "selectCity": "Shaharni tanlang",
+      "currentLocation": "Hozirgi joylashuv"
+    },
+    "categories": {
+      "all": "Barchasi",
+      "nature": "Tabiat",
+      "historical": "Tarixiy/Madaniy",
+      "restaurants": "Restoranlar/Kafelar",
+      "entertainment": "Ko'ngilochar"
+    },
+    "search": {
+      "placeholder": "Joy yoki shahar nomini qidiring...",
+      "search": "Qidirish"
+    },
+    "place": {
+      "rating": "Reyting",
+      "distance": "Masofa",
+      "open": "Ochiq",
+      "closed": "Yopiq",
+      "getDirections": "Yo'lni ko'rsatish",
+      "addToFavorites": "Sevimlilarga qo'shish",
+      "removeFromFavorites": "Sevimlardan o'chirish"
+    },
+    "suggest": {
+      "button": "Bugun qayerga borishim kerak?",
+      "randomSuggestion": "Tasodifiy taklif"
+    },
+    "auth": {
+      "loginWithTelegram": "Telegram orqali kirish",
+      "logout": "Chiqish",
+      "welcome": "Xush kelibsiz"
+    },
+    "onboarding": {
+      "search": "Bu yerdan qidirishni boshlang",
+      "categories": "Kategoriyani tanlang",
+      "mapToggle": "Xarita ko'rinishiga o'tish",
+      "directions": "Yo'lni ko'rsatish uchun bosing",
+      "next": "Keyingi",
+      "skip": "O'tkazib yuborish",
+      "finish": "Tushundim",
+      "help": "Yordam"
+    },
+    "favorites": {
+      "empty": "Sevimli joylar yo'q",
+      "emptyMessage": "Sevimli joylarni qo'shish uchun yulduzcha belgisini bosing"
+    }
+  }
+}

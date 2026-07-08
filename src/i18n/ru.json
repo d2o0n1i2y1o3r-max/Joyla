@@ -1,0 +1,63 @@
+{
+  "translation": {
+    "app": {
+      "name": "Joyla",
+      "tagline": "Откройте интересные места"
+    },
+    "nav": {
+      "home": "Главная",
+      "map": "Карта",
+      "favorites": "Избранное",
+      "settings": "Настройки"
+    },
+    "location": {
+      "detecting": "Определение местоположения...",
+      "allowLocation": "Пожалуйста, разрешите доступ к местоположению",
+      "selectCity": "Выберите город",
+      "currentLocation": "Текущее местоположение"
+    },
+    "categories": {
+      "all": "Все",
+      "nature": "Природа",
+      "historical": "Исторические/Культурные",
+      "restaurants": "Рестораны/Кафе",
+      "entertainment": "Развлечения"
+    },
+    "search": {
+      "placeholder": "Поиск места или города...",
+      "search": "Поиск"
+    },
+    "place": {
+      "rating": "Рейтинг",
+      "distance": "Расстояние",
+      "open": "Открыто",
+      "closed": "Закрыто",
+      "getDirections": "Построить маршрут",
+      "addToFavorites": "Добавить в избранное",
+      "removeFromFavorites": "Удалить из избранного"
+    },
+    "suggest": {
+      "button": "Куда пойти сегодня?",
+      "randomSuggestion": "Случайное предложение"
+    },
+    "auth": {
+      "loginWithTelegram": "Войти через Telegram",
+      "logout": "Выйти",
+      "welcome": "Добро пожаловать"
+    },
+    "onboarding": {
+      "search": "Начните поиск здесь",
+      "categories": "Выберите категорию",
+      "mapToggle": "Переключиться на карту",
+      "directions": "Нажмите для построения маршрута",
+      "next": "Далее",
+      "skip": "Пропустить",
+      "finish": "Понятно",
+      "help": "Помощь"
+    },
+    "favorites": {
+      "empty": "Нет избранных мест",
+      "emptyMessage": "Нажмите на звездочку, чтобы добавить в избранное"
+    }
+  }
+}
