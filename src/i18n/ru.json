@@ -1,13 +1,16 @@
 {
   "translation": {
     "app": {
-      "name": "Joyla",
+      "name": "Joylar",
       "tagline": "Откройте интересные места"
     },
     "nav": {
       "home": "Главная",
       "map": "Карта",
       "favorites": "Избранное",
+      "dachas": "Дачи",
+      "family": "Семейное",
+      "about": "О нас",
       "settings": "Настройки"
     },
     "location": {
@@ -15,7 +18,8 @@
       "allowLocation": "Пожалуйста, разрешите доступ к местоположению",
       "selectCity": "Выберите город",
       "currentLocation": "Текущее местоположение",
-      "nearest": "Ближайший"
+      "nearest": "Ближайший",
+      "searchGlobalCity": "Поиск городов по всему миру..."
     },
     "categories": {
       "all": "Все",

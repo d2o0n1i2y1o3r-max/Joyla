@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "Bogi Eram bog'i",
+    "city": "Toshkent",
+    "photos": ["https://via.placeholder.com/400x300?text=Bogi+Eram"],
+    "picnicSpot": true,
+    "bestSeason": "spring",
+    "vehicleAccess": "sedan",
+    "description": "Toshkent shahridagi eng go'zal bog'lardan biri. Piknik uchun qulay, soyabon joylar ko'p. Bahorda gullar gullab-yashnaydi.",
+    "location": { "lat": 41.31, "lng": 69.24 }
+  },
+  {
+    "id": "2",
+    "name": "Chorvoq ko'li sohili",
+    "city": "Toshkent viloyati",
+    "photos": ["https://via.placeholder.com/400x300?text=Charvak+Lake"],
+    "picnicSpot": true,
+    "bestSeason": "summer",
+    "vehicleAccess": "sedan",
+    "description": "Chorvoq ko'li bo'yida piknik qilish uchun ajoyib joy. Suvda suzish va qayiqqa o'tish mumkin.",
+    "location": { "lat": 41.6167, "lng": 70.0833 }
+  },
+  {
+    "id": "3",
+    "name": "Alisher Navoiy bog'i",
+    "city": "Toshkent",
+    "photos": ["https://via.placeholder.com/400x300?text=Navoiy+Park"],
+    "picnicSpot": true,
+    "bestSeason": "spring",
+    "vehicleAccess": "sedan",
+    "description": "Shahar markazida joylashgan katta bog'. Bolalar uchun o'yin maydonlari va oilaviy dam olish joylari mavjud.",
+    "location": { "lat": 41.32, "lng": 69.28 }
+  },
+  {
+    "id": "4",
+    "name": "Lolazorlar (Tulip Fields)",
+    "city": "Toshkent viloyati",
+    "photos": ["https://via.placeholder.com/400x300?text=Tulip+Fields"],
+    "picnicSpot": true,
+    "bestSeason": "spring",
+    "vehicleAccess": "sedan",
+    "description": "Bahorda lolalar gullab-yashnaydigan katta maydon. Oilaviy suratga tushish uchun ajoyib joy.",
+    "location": { "lat": 41.45, "lng": 69.65 }
+  },
+  {
+    "id": "5",
+    "name": "Zarafshon daryosi sohili",
+    "city": "Samarqand",
+    "photos": ["https://via.placeholder.com/400x300?text=Zarafshan+River"],
+    "picnicSpot": true,
+    "bestSeason": "summer",
+    "vehicleAccess": "sedan",
+    "description": "Samarqand yaqinidagi Zarafshon daryosi sohilida piknik qilish uchun qulay joylar.",
+    "location": { "lat": 39.65, "lng": 66.95 }
+  },
+  {
+    "id": "6",
+    "name": "Chimgan tog' etagi",
+    "city": "Toshkent viloyati",
+    "photos": ["https://via.placeholder.com/400x300?text=Chimgan+Foothills"],
+    "picnicSpot": true,
+    "bestSeason": "summer",
+    "vehicleAccess": "suv_recommended",
+    "description": "Chimgan tog' etagida piknik qilish uchun manzarali joylar. Yo'l biroz qiyin, SUV tavsiya etiladi.",
+    "location": { "lat": 41.5667, "lng": 69.9167 }
+  },
+  {
+    "id": "7",
+    "name": "Buxoro shahar bog'i",
+    "city": "Buxoro",
+    "photos": ["https://via.placeholder.com/400x300?text=Bukhara+City+Park"],
+    "picnicSpot": true,
+    "bestSeason": "spring",
+    "vehicleAccess": "sedan",
+    "description": "Buxoro shahridagi tarixiy bog'. Oilaviy dam olish uchun qulay.",
+    "location": { "lat": 39.77, "lng": 64.43 }
+  },
+  {
+    "id": "8",
+    "name": "Farg'ona vodiysi bog'i",
+    "city": "Farg'ona",
+    "photos": ["https://via.placeholder.com/400x300?text=Fergana+Valley+Park"],
+    "picnicSpot": true,
+    "bestSeason": "spring",
+    "vehicleAccess": "sedan",
+    "description": "Farg'ona vodiysidagi yashil bog'. Meva daraxtlari va soyabon joylar ko'p.",
+    "location": { "lat": 40.38, "lng": 71.78 }
+  },
+  {
+    "id": "9",
+    "name": "Kichik Orol bog'i",
+    "city": "Toshkent",
+    "photos": ["https://via.placeholder.com/400x300?text=Kichik+Orol+Park"],
+    "picnicSpot": true,
+    "bestSeason": "summer",
+    "vehicleAccess": "sedan",
+    "description": "Toshkent shahridagi katta ko'li bor bog'. Piknik va suzish uchun qulay.",
+    "location": { "lat": 41.33, "lng": 69.30 }
+  },
+  {
+    "id": "10",
+    "name": "Qoratepa tog' yo'li",
+    "city": "Toshkent viloyati",
+    "photos": ["https://via.placeholder.com/400x300?text=Qoratepa+Mountain+Trail"],
+    "picnicSpot": true,
+    "bestSeason": "spring",
+    "vehicleAccess": "on_foot_only",
+    "description": "Qoratepa tog'laridagi piyoda yo'llar. Piknik uchun tabiat ichidagi joylar. Faqat piyoda kirish mumkin.",
+    "location": { "lat": 41.50, "lng": 69.80 }
+  }
+]

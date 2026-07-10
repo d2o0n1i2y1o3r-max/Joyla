@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "Chorvoq bo'yidagi dacha",
+    "region": "Toshkent viloyati",
+    "photos": ["https://via.placeholder.com/400x300?text=Chorvoq+Dacha"],
+    "pricePerNight": 800000,
+    "capacity": 8,
+    "amenities": ["pool", "barbecue", "wifi", "parking"],
+    "description": "Chorvoq ko'li bo'yida joylashgan, tinch va manzarali dacha. Havuz va barbekyu maydoni mavjud.",
+    "location": { "lat": 41.6167, "lng": 70.0833 }
+  },
+  {
+    "id": "2",
+    "name": "Chimgan tog' etagidagi villa",
+    "region": "Toshkent viloyati",
+    "photos": ["https://via.placeholder.com/400x300?text=Chimgan+Villa"],
+    "pricePerNight": 1200000,
+    "capacity": 12,
+    "amenities": ["sauna", "barbecue", "wifi", "parking", "kitchen"],
+    "description": "Chimgan tog' etagida joylashgan zamonaviy villa. Sauna va to'liq jihozlangan oshxona.",
+    "location": { "lat": 41.5667, "lng": 69.9167 }
+  },
+  {
+    "id": "3",
+    "name": "Buxoro shahar tashqarisidagi dacha",
+    "region": "Buxoro",
+    "photos": ["https://via.placeholder.com/400x300?text=Bukhara+Dacha"],
+    "pricePerNight": 600000,
+    "capacity": 6,
+    "amenities": ["barbecue", "parking", "garden"],
+    "description": "Buxoro shahri tashqarisida, tarixiy obida yaqinida joylashgan qulay dacha.",
+    "location": { "lat": 39.7747, "lng": 64.4287 }
+  },
+  {
+    "id": "4",
+    "name": "Samarqand bog' ichidagi uy",
+    "region": "Samarqand",
+    "photos": ["https://via.placeholder.com/400x300?text=Samarkand+Garden+House"],
+    "pricePerNight": 700000,
+    "capacity": 5,
+    "amenities": ["garden", "wifi", "parking"],
+    "description": "Samarqand shahridagi yashil bog' ichida joylashgan tinch uy.",
+    "location": { "lat": 39.6542, "lng": 66.9597 }
+  },
+  {
+    "id": "5",
+    "name": "Farg'ona vodiysidagi ferma uyi",
+    "region": "Farg'ona",
+    "photos": ["https://via.placeholder.com/400x300?text=Fergana+Farm+House"],
+    "pricePerNight": 500000,
+    "capacity": 10,
+    "amenities": ["garden", "barbecue", "parking", "farm"],
+    "description": "Farg'ona vodiysidagi ferma uyi, meva va sabzavotlar bilan.",
+    "location": { "lat": 40.3777, "lng": 71.7845 }
+  },
+  {
+    "id": "6",
+    "name": "Xiva shahridagi tarixiy dacha",
+    "region": "Xiva",
+    "photos": ["https://via.placeholder.com/400x300?text=Khiva+Historical+Dacha"],
+    "pricePerNight": 900000,
+    "capacity": 7,
+    "amenities": ["wifi", "parking", "terrace"],
+    "description": "Xiva shahridagi Ichan Qala yaqinidagi tarixiy dacha.",
+    "location": { "lat": 41.3783, "lng": 60.3636 }
+  },
+  {
+    "id": "7",
+    "name": "Namangan tog' etagidagi dacha",
+    "region": "Namangan",
+    "photos": ["https://via.placeholder.com/400x300?text=Namangan+Mountain+Dacha"],
+    "pricePerNight": 550000,
+    "capacity": 8,
+    "amenities": ["barbecue", "parking", "mountain_view"],
+    "description": "Namangan tog' etagida, manzarali joyda joylashgan dacha.",
+    "location": { "lat": 40.9983, "lng": 71.6726 }
+  },
+  {
+    "id": "8",
+    "name": "Andijon ferma dachasi",
+    "region": "Andijon",
+    "photos": ["https://via.placeholder.com/400x300?text=Andijan+Farm+Dacha"],
+    "pricePerNight": 450000,
+    "capacity": 6,
+    "amenities": ["garden", "barbecue", "parking"],
+    "description": "Andijon viloyatidagi ferma dachasi, yashil bog'lar bilan.",
+    "location": { "lat": 40.7821, "lng": 72.3442 }
+  },
+  {
+    "id": "9",
+    "name": "Qarshi cho'l ichidagi dacha",
+    "region": "Qarshi",
+    "photos": ["https://via.placeholder.com/400x300?text=Kashkar+Desert+Dacha"],
+    "pricePerNight": 400000,
+    "capacity": 5,
+    "amenities": ["parking", "terrace", "wifi"],
+    "description": "Qarshi cho'l ichida, tabiat manzarali joyda joylashgan dacha.",
+    "location": { "lat": 38.8608, "lng": 65.7896 }
+  },
+  {
+    "id": "10",
+    "name": "Toshkent shahar chekkasidagi dacha",
+    "region": "Toshkent",
+    "photos": ["https://via.placeholder.com/400x300?text=Tashkent+Suburb+Dacha"],
+    "pricePerNight": 650000,
+    "capacity": 7,
+    "amenities": ["pool", "barbecue", "wifi", "parking", "sauna"],
+    "description": "Toshkent shahar chekkasida, shahar markaziga yaqin joylashgan qulay dacha.",
+    "location": { "lat": 41.2995, "lng": 69.2401 }
+  }
+]

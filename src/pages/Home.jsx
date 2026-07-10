@@ -83,7 +83,16 @@ const Home = () => {
                 <a onClick={() => navigate('/')}>{t('nav.home')}</a>
               </li>
               <li>
+                <a onClick={() => navigate('/dachas')}>{t('nav.dachas')}</a>
+              </li>
+              <li>
+                <a onClick={() => navigate('/family')}>{t('nav.family')}</a>
+              </li>
+              <li>
                 <a onClick={() => navigate('/favorites')}>{t('nav.favorites')}</a>
+              </li>
+              <li>
+                <a onClick={() => navigate('/about')}>{t('nav.about')}</a>
               </li>
             </ul>
           </div>
@@ -101,8 +110,23 @@ const Home = () => {
               </a>
             </li>
             <li>
+              <a onClick={() => navigate('/dachas')} className="font-medium">
+                {t('nav.dachas')}
+              </a>
+            </li>
+            <li>
+              <a onClick={() => navigate('/family')} className="font-medium">
+                {t('nav.family')}
+              </a>
+            </li>
+            <li>
               <a onClick={() => navigate('/favorites')} className="font-medium">
                 {t('nav.favorites')}
+              </a>
+            </li>
+            <li>
+              <a onClick={() => navigate('/about')} className="font-medium">
+                {t('nav.about')}
               </a>
             </li>
           </ul>

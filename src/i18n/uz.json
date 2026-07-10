@@ -1,13 +1,16 @@
 {
   "translation": {
     "app": {
-      "name": "Joyla",
+      "name": "Joylar",
       "tagline": "Qiziqarli joylarni kashf eting"
     },
     "nav": {
       "home": "Bosh sahifa",
       "map": "Xarita",
       "favorites": "Sevimlilar",
+      "dachas": "Dachalar",
+      "family": "Oilaviy",
+      "about": "Biz haqimizda",
       "settings": "Sozlamalar"
     },
     "location": {
@@ -15,7 +18,8 @@
       "allowLocation": "Iltimos, joylashuvga ruxsat bering",
       "selectCity": "Shaharni tanlang",
       "currentLocation": "Hozirgi joylashuv",
-      "nearest": "Eng yaqini"
+      "nearest": "Eng yaqini",
+      "searchGlobalCity": "Butun dunyo bo'ylab shahar qidiring..."
     },
     "categories": {
       "all": "Barchasi",

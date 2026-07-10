@@ -29,6 +29,8 @@ const LocationDetector = () => {
   const { t } = useTranslation();
   const { location, manualCity, isLoading, setLocation, setManualCity, setLoading, setError } = useLocationStore();
   const [selectedCity, setSelectedCity] = useState('');
+  const [globalCitySearch, setGlobalCitySearch] = useState('');
+  const [isSearchingGlobal, setIsSearchingGlobal] = useState(false);
 
   // Initialize selectedCity from store state
   useEffect(() => {
@@ -119,9 +121,38 @@ const LocationDetector = () => {
         setManualCity({ lat: city.lat, lng: city.lng, name: city.name });
         // Clear geolocation location when manually selecting a city
         setLocation(null);
+        setGlobalCitySearch('');
       }
     } else {
       setManualCity(null);
+    }
+  };
+
+  const handleGlobalCitySearch = async () => {
+    if (!globalCitySearch.trim()) return;
+    
+    setIsSearchingGlobal(true);
+    setError(null);
+    
+    try {
+      // TODO: Integrate with a geocoding API (Google Maps Geocoding API or OpenStreetMap Nominatim)
+      // For now, this is a placeholder that would be connected to the backend proxy
+      // Example API call structure:
+      // const response = await fetch(`/api/geocode?query=${encodeURIComponent(globalCitySearch)}`);
+      // const data = await response.json();
+      // if (data.lat && data.lng) {
+      //   setManualCity({ lat: data.lat, lng: data.lng, name: globalCitySearch });
+      //   setLocation(null);
+      //   setSelectedCity('');
+      // }
+      
+      // Placeholder: alert that this feature requires API integration
+      alert('Global city search requires geocoding API integration. This will be connected to the backend proxy.');
+    } catch (error) {
+      console.error('Global city search error:', error);
+      setError('Failed to search for city');
+    } finally {
+      setIsSearchingGlobal(false);
     }
   };
 
@@ -132,7 +163,7 @@ const LocationDetector = () => {
     : t('location.detecting');
 
   return (
-    <div className="flex flex-col sm:flex-row gap-3 items-center justify-center p-4 bg-base-200 rounded-lg">
+    <div className="flex flex-col gap-3 items-center justify-center p-4 bg-base-200 rounded-lg">
       <div className="flex items-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +195,7 @@ const LocationDetector = () => {
         </span>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
         <button
           onClick={detectLocation}
           className="btn btn-sm btn-primary"
@@ -193,7 +224,7 @@ const LocationDetector = () => {
         <select
           value={selectedCity}
           onChange={handleCityChange}
-          className="select select-sm select-bordered"
+          className="select select-sm select-bordered flex-1 sm:flex-none"
         >
           <option value="nearest">{t('location.nearest')}</option>
           <option value="">{t('location.selectCity')}</option>
@@ -203,6 +234,42 @@ const LocationDetector = () => {
             </option>
           ))}
         </select>
+      </div>
+
+      <div className="flex gap-2 w-full sm:w-auto">
+        <input
+          type="text"
+          placeholder={t('location.searchGlobalCity')}
+          value={globalCitySearch}
+          onChange={(e) => setGlobalCitySearch(e.target.value)}
+          onKeyPress={(e) => e.key === 'Enter' && handleGlobalCitySearch()}
+          className="input input-sm input-bordered flex-1 sm:flex-none"
+          disabled={isSearchingGlobal}
+        />
+        <button
+          onClick={handleGlobalCitySearch}
+          className="btn btn-sm btn-secondary"
+          disabled={isSearchingGlobal || !globalCitySearch.trim()}
+        >
+          {isSearchingGlobal ? (
+            <span className="loading loading-spinner loading-xs"></span>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          )}
+        </button>
       </div>
     </div>
   );
