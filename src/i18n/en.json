@@ -43,6 +43,7 @@
       "removeFromFavorites": "Remove from favorites"
     },
     "suggest": {
+      "title": "AI Recommendation",
       "button": "Where should I go today?",
       "randomSuggestion": "Random suggestion"
     },

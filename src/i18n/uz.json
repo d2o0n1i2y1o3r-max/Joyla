@@ -43,6 +43,7 @@
       "removeFromFavorites": "Sevimlardan o'chirish"
     },
     "suggest": {
+      "title": "AI Tavsiya",
       "button": "Bugun qayerga borishim kerak?",
       "randomSuggestion": "Tasodifiy taklif"
     },

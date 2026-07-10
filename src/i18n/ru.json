@@ -43,6 +43,7 @@
       "removeFromFavorites": "Удалить из избранного"
     },
     "suggest": {
+      "title": "AI Рекомендация",
       "button": "Куда пойти сегодня?",
       "randomSuggestion": "Случайное предложение"
     },
