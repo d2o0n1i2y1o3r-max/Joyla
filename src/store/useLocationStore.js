@@ -16,7 +16,7 @@ export const useLocationStore = create(
       clearLocation: () => set({ location: null, manualCity: null, error: null }),
     }),
     {
-      name: 'joyla-location',
+      name: 'joylar-location',
     }
   )
 );

@@ -20,7 +20,7 @@ export const useOnboardingStore = create(
       }),
     }),
     {
-      name: 'joyla-onboarding',
+      name: 'joylar-onboarding',
     }
   )
 );

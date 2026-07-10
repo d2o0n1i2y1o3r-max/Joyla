@@ -5,12 +5,22 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import placesRoutes from './routes/places.js';
 import authRoutes from './routes/auth.js';
-import './bot.js';
 
+// Load .env from project root (where npm run dev is executed)
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const projectRoot = path.dirname(path.dirname(__filename));
+const envPath = path.join(projectRoot, '.env');
 
-dotenv.config({ path: path.join(__dirname, '.env') });
+dotenv.config({ path: envPath });
+
+// Use port from env or fallback to 3001
+const PORT = process.env.PORT || 3001;
+
+console.log('[Server] TELEGRAM_BOT_TOKEN loaded:', !!process.env.TELEGRAM_BOT_TOKEN);
+console.log('[Server] Starting on port:', PORT);
+
+// Import bot after env is set (static import to ensure same process context)
+import './bot.js';
 
 // Global error handlers
 process.on('uncaughtException', (err) => {
@@ -24,7 +34,6 @@ process.on('unhandledRejection', (err) => {
 });
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -46,4 +55,21 @@ const server = app.listen(PORT, () => {
 
 server.on('error', (err) => {
   console.error('[Server] Server error:', err);
+});
+
+// Graceful shutdown handling
+process.on('SIGTERM', () => {
+  console.log('[Server] SIGTERM received, shutting down gracefully');
+  server.close(() => {
+    console.log('[Server] Server closed');
+    process.exit(0);
+  });
+});
+
+process.on('SIGINT', () => {
+  console.log('[Server] SIGINT received, shutting down gracefully');
+  server.close(() => {
+    console.log('[Server] Server closed');
+    process.exit(0);
+  });
 });

@@ -28,7 +28,7 @@ export const useAuthStore = create(
       }),
     }),
     {
-      name: 'joyla-auth',
+      name: 'joylar-auth',
     }
   )
 );

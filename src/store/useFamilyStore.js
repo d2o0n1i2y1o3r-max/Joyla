@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-const useFamilyStore = create((set) => ({
+export const useFamilyStore = create((set) => ({
   familyPlaces: [],
   filteredFamilyPlaces: [],
   filters: {
@@ -38,5 +38,3 @@ const useFamilyStore = create((set) => ({
       filteredFamilyPlaces: [],
     }),
 }));
-
-export default useFamilyStore;

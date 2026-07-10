@@ -27,7 +27,7 @@ export const useFavoritesStore = create(
       },
     }),
     {
-      name: 'joyla-favorites',
+      name: 'joylar-favorites',
     }
   )
 );

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useDachasStore } from '../store/useDachasStore';
+import useDachasStore from '../store/useDachasStore';
 
 const REGIONS = [
   'Toshkent viloyati',

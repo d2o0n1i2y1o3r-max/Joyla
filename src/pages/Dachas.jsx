@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import DachaCard from '../components/DachaCard';
 import DachaFilters from '../components/DachaFilters';
 import MapView from '../components/MapView';
-import { useDachasStore } from '../store/useDachasStore';
+import useDachasStore from '../store/useDachasStore';
 import dachasData from '../../server/dachas.json';
 
 const Dachas = () => {
@@ -74,7 +74,7 @@ const Dachas = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl gap-2">
-            <img src="/logo.svg" alt="Joyla Logo" className="w-8 h-8" />
+            <img src="/logo.svg" alt="Joylar Logo" className="w-8 h-8" />
             <span className="font-bold">{t('app.name')}</span>
           </a>
         </div>
