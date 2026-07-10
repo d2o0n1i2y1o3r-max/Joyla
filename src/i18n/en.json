@@ -1,0 +1,69 @@
+{
+  "translation": {
+    "app": {
+      "name": "Joylar",
+      "tagline": "Discover amazing places"
+    },
+    "nav": {
+      "home": "Home",
+      "map": "Map",
+      "favorites": "Favorites",
+      "dachas": "Dachas",
+      "family": "Family",
+      "about": "About Us",
+      "settings": "Settings"
+    },
+    "location": {
+      "detecting": "Detecting location...",
+      "allowLocation": "Please allow location access",
+      "selectCity": "Select city",
+      "currentLocation": "Current location",
+      "nearest": "Nearest to me",
+      "searchGlobalCity": "Search cities worldwide..."
+    },
+    "categories": {
+      "all": "All",
+      "nature": "Nature",
+      "wellness": "Health & Wellness",
+      "historical": "Historical/Cultural",
+      "restaurants": "Restaurants/Cafes",
+      "entertainment": "Entertainment"
+    },
+    "search": {
+      "placeholder": "Search for a place or city...",
+      "search": "Search"
+    },
+    "place": {
+      "rating": "Rating",
+      "distance": "Distance",
+      "open": "Open",
+      "closed": "Closed",
+      "getDirections": "Get Directions",
+      "addToFavorites": "Add to favorites",
+      "removeFromFavorites": "Remove from favorites"
+    },
+    "suggest": {
+      "button": "Where should I go today?",
+      "randomSuggestion": "Random suggestion"
+    },
+    "auth": {
+      "loginWithTelegram": "Login with Telegram",
+      "logout": "Logout",
+      "welcome": "Welcome"
+    },
+    "onboarding": {
+      "search": "Start searching here",
+      "categories": "Choose a category",
+      "mapToggle": "Switch to map view",
+      "directions": "Tap to get directions",
+      "next": "Next",
+      "skip": "Skip",
+      "finish": "Got it",
+      "help": "Help"
+    },
+    "favorites": {
+      "empty": "No favorite places",
+      "emptyMessage": "Tap the star icon to add places to favorites"
+    }
+  }
+}

@@ -87,7 +87,7 @@ bot.onText(/\/start (.+)/, async (msg, match) => {
     console.log('[Bot] Attempting to send message to Telegram API...');
 
     // Send OTP to user
-    const result = await bot.sendMessage(chatId, `Hi, this is Doniyor 👋\n\nYour Joyla verification code: ${otp}\n\nThis code will expire in 5 minutes.`);
+    const result = await bot.sendMessage(chatId, `Hi, this is Doniyor 👋\n\nYour Joylar verification code: ${otp}\n\nThis code will expire in 5 minutes.`);
     console.log('[Bot] Message sent successfully');
     console.log('[Bot] Telegram API response:', JSON.stringify(result));
   } catch (error) {
@@ -103,7 +103,7 @@ bot.onText(/\/start$/, async (msg) => {
     console.log('[Bot] /start without payload received');
     console.log('[Bot] Full message object:', JSON.stringify(msg, null, 2));
     
-    const result = await bot.sendMessage(msg.chat.id, 'Welcome to Joyla! Please use the link from the app to start the authentication process.');
+    const result = await bot.sendMessage(msg.chat.id, 'Welcome to Joylar! Please use the link from the app to start the authentication process.');
     console.log('[Bot] Welcome message sent successfully');
     console.log('[Bot] Telegram API response:', JSON.stringify(result));
   } catch (error) {
@@ -124,7 +124,7 @@ bot.onText(/\/getcode/, async (msg) => {
     
     if (!sessionId) {
       console.log('[Bot] No sessionId found for chatId:', chatId);
-      await bot.sendMessage(chatId, 'Please start the authentication process from the Joyla app first by clicking the "Login with Telegram" button.');
+      await bot.sendMessage(chatId, 'Please start the authentication process from the Joylar app first by clicking the "Login with Telegram" button.');
       return;
     }
 
@@ -143,7 +143,7 @@ bot.onText(/\/getcode/, async (msg) => {
     console.log(`[Bot] Generated new OTP ${otp} for session ${sessionId}, chat ${chatId}`);
 
     // Send new OTP to user
-    const result = await bot.sendMessage(chatId, `Hi, this is Doniyor 👋\n\nYour new Joyla verification code: ${otp}\n\nThis code will expire in 5 minutes.`);
+    const result = await bot.sendMessage(chatId, `Hi, this is Doniyor 👋\n\nYour new Joylar verification code: ${otp}\n\nThis code will expire in 5 minutes.`);
     console.log('[Bot] New code sent successfully');
     console.log('[Bot] Telegram API response:', JSON.stringify(result));
   } catch (error) {

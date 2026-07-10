@@ -42,8 +42,10 @@ const Home = () => {
   };
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'uz' ? 'ru' : 'uz';
-    i18n.changeLanguage(newLang);
+    const languages = ['uz', 'ru', 'en'];
+    const currentIndex = languages.indexOf(i18n.language);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    i18n.changeLanguage(languages[nextIndex]);
   };
 
   const handleLogout = () => {
@@ -138,7 +140,7 @@ const Home = () => {
             className="btn btn-ghost btn-sm"
             title="Toggle Language"
           >
-            {i18n.language === 'uz' ? '🇺🇿 UZ' : '🇷🇺 RU'}
+            {i18n.language === 'uz' ? '🇺🇿 UZ' : i18n.language === 'ru' ? '🇷🇺 RU' : '🇬🇧 EN'}
           </button>
 
           <button

@@ -37,7 +37,7 @@ router.post('/telegram', async (req, res) => {
           `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
           {
             chat_id: id,
-            text: `Hi, this is Doniyor 👋\n\nWelcome to Joyla! Discover amazing places in Uzbekistan.`,
+            text: `Hi, this is Doniyor 👋\n\nWelcome to Joylar! Discover amazing places in Uzbekistan.`,
           }
         );
       } catch (error) {
@@ -200,7 +200,7 @@ router.post('/resend-otp', async (req, res) => {
         `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
         {
           chat_id: chatId,
-          text: `Hi, this is Doniyor 👋\n\nYour new Joyla verification code: ${newOtp}\n\nThis code will expire in 5 minutes.`,
+          text: `Hi, this is Doniyor 👋\n\nYour new Joylar verification code: ${newOtp}\n\nThis code will expire in 5 minutes.`,
         }
       );
 

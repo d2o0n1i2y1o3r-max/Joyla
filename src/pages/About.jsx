@@ -22,8 +22,10 @@ const About = () => {
   };
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'uz' ? 'ru' : 'uz';
-    i18n.changeLanguage(newLang);
+    const languages = ['uz', 'ru', 'en'];
+    const currentIndex = languages.indexOf(i18n.language);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    i18n.changeLanguage(languages[nextIndex]);
   };
 
   return (
@@ -59,7 +61,7 @@ const About = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl gap-2">
-            <img src="/logo.svg" alt="Joyla Logo" className="w-8 h-8" />
+            <img src="/logo.svg" alt="Joylar Logo" className="w-8 h-8" />
             <span className="font-bold">{t('app.name')}</span>
           </a>
         </div>
@@ -76,7 +78,7 @@ const About = () => {
 
         <div className="navbar-end gap-2">
           <button onClick={toggleLanguage} className="btn btn-ghost btn-sm">
-            {i18n.language === 'uz' ? '🇺🇿 UZ' : '🇷🇺 RU'}
+            {i18n.language === 'uz' ? '🇺🇿 UZ' : i18n.language === 'ru' ? '🇷🇺 RU' : '🇬🇧 EN'}
           </button>
           <button onClick={toggleTheme} className="btn btn-ghost btn-sm">
             {isDarkMode ? '☀️' : '🌙'}

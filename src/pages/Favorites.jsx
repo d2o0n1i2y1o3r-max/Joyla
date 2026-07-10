@@ -1,12 +1,35 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import PlaceCard from '../components/PlaceCard';
 import { useFavoritesStore } from '../store/useFavoritesStore';
 
 const Favorites = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const { favorites } = useFavoritesStore();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'dark') {
+      setIsDarkMode(true);
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    const newTheme = isDarkMode ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
+  const toggleLanguage = () => {
+    const languages = ['uz', 'ru', 'en'];
+    const currentIndex = languages.indexOf(i18n.language);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    i18n.changeLanguage(languages[nextIndex]);
+  };
 
   return (
     <div className="min-h-screen bg-base-100">
@@ -36,6 +59,15 @@ const Favorites = () => {
             <span className="text-2xl">⭐</span>
             <span className="font-bold">{t('nav.favorites')}</span>
           </a>
+        </div>
+
+        <div className="navbar-end gap-2">
+          <button onClick={toggleLanguage} className="btn btn-ghost btn-sm">
+            {i18n.language === 'uz' ? '🇺🇿 UZ' : i18n.language === 'ru' ? '🇷🇺 RU' : '🇬🇧 EN'}
+          </button>
+          <button onClick={toggleTheme} className="btn btn-ghost btn-sm">
+            {isDarkMode ? '☀️' : '🌙'}
+          </button>
         </div>
       </header>
 
