@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import placesRoutes from './routes/places.js';
 import authRoutes from './routes/auth.js';
+import recommendRoutes from './routes/recommend.js';
 
 // Load .env from project root (where npm run dev is executed)
 const __filename = fileURLToPath(import.meta.url);
@@ -40,6 +41,7 @@ app.use(express.json());
 
 app.use('/api/places', placesRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/recommend', recommendRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Joyla API Server' });
