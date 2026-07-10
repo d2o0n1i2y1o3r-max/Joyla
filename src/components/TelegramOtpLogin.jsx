@@ -12,6 +12,8 @@ const TelegramOtpLogin = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [isCodeSent, setIsCodeSent] = useState(false);
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false);
+  const [savedCode, setSavedCode] = useState(null);
 
   const botUsername = import.meta.env.VITE_TELEGRAM_BOT_USERNAME || 'JoylaAppBot';
 
@@ -21,10 +23,46 @@ const TelegramOtpLogin = () => {
     setSessionId(newSessionId);
   }, []);
 
+  // Check for saved OTP code when component mounts or when isCodeSent changes
+  useEffect(() => {
+    if (isCodeSent) {
+      // Try to get saved code from sessionStorage
+      const saved = sessionStorage.getItem('otp_code');
+      if (saved && saved.length === 6 && /^\d{6}$/.test(saved)) {
+        console.log('[OTP] Found saved code in sessionStorage');
+        setSavedCode(saved);
+        setShowConfirmDialog(true);
+      }
+    }
+  }, [isCodeSent]);
+
+  const handleAutoFillConfirm = () => {
+    if (savedCode) {
+      setCode(savedCode);
+      // Save to sessionStorage for next time
+      sessionStorage.setItem('otp_code', savedCode);
+    }
+    setShowConfirmDialog(false);
+  };
+
+  const handleAutoFillCancel = () => {
+    setShowConfirmDialog(false);
+    setSavedCode(null);
+  };
+
   const handleOpenBot = () => {
     const deepLink = `https://t.me/${botUsername}?start=${sessionId}`;
     window.open(deepLink, '_blank');
     setIsCodeSent(true);
+  };
+
+  const handleCodeChange = (e) => {
+    const newCode = e.target.value.replace(/\D/g, '').slice(0, 6);
+    setCode(newCode);
+    // Save to sessionStorage as user types
+    if (newCode.length === 6) {
+      sessionStorage.setItem('otp_code', newCode);
+    }
   };
 
   const handleVerify = async (e) => {
@@ -85,6 +123,7 @@ const TelegramOtpLogin = () => {
       if (response.ok) {
         setError('');
         setCode('');
+        sessionStorage.removeItem('otp_code');
         // Focus back on input after resend
         setTimeout(() => {
           const input = document.querySelector('input[type="text"]');
@@ -122,7 +161,7 @@ const TelegramOtpLogin = () => {
             <input
               type="text"
               value={code}
-              onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+              onChange={handleCodeChange}
               placeholder="123456"
               className="input input-bordered input-lg text-center text-2xl tracking-widest"
               maxLength={6}
@@ -158,6 +197,33 @@ const TelegramOtpLogin = () => {
             Resend code
           </button>
         </form>
+      )}
+
+      {/* OTP Auto-fill Confirmation Modal */}
+      {showConfirmDialog && savedCode && (
+        <dialog className="modal modal-open">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg mb-4">🔑 Kodni avtomatik kiritaymi?</h3>
+            <p className="mb-6">Oldingi kodi ({savedCode}) kiritish kerakmi?</p>
+            <div className="modal-action gap-2">
+              <button
+                className="btn btn-ghost"
+                onClick={handleAutoFillCancel}
+              >
+                Yo'q
+              </button>
+              <button
+                className="btn btn-primary"
+                onClick={handleAutoFillConfirm}
+              >
+                Ha
+              </button>
+            </div>
+          </div>
+          <form method="dialog" className="modal-backdrop" onClick={handleAutoFillCancel}>
+            <button>Close</button>
+          </form>
+        </dialog>
       )}
 
       <p className="text-sm text-base-content/70 text-center max-w-md">

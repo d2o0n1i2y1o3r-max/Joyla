@@ -3,11 +3,13 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 export async function getRecommendation(weather, season, places) {
   if (!ANTHROPIC_API_KEY) {
-    console.warn('[LLM] ANTHROPIC_API_KEY not set, using fallback logic');
+    console.warn('[LLM] ⚠️  ANTHROPIC_API_KEY not set in server/.env');
+    console.log('[LLM] Using fallback recommendation logic (mock data)');
     return getFallbackRecommendation(weather, season, places);
   }
 
   try {
+    console.log('[LLM] Calling Anthropic API...');
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -41,21 +43,42 @@ Do not include any other text in your response.`,
     });
 
     if (!response.ok) {
-      throw new Error(`LLM API error: ${response.status}`);
+      const errorBody = await response.text();
+      console.error('[LLM] API returned error status:', response.status);
+      console.error('[LLM] Error response body:', errorBody);
+      throw new Error(`LLM API error: ${response.status} - ${errorBody}`);
     }
 
     const data = await response.json();
-    const content = data.content[0].text;
+    console.log('[LLM] API response received');
     
-    // Parse JSON from the response
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      throw new Error('Failed to parse LLM response as JSON');
+    if (!data.content || !data.content[0] || !data.content[0].text) {
+      console.error('[LLM] Unexpected API response structure:', JSON.stringify(data));
+      throw new Error('Unexpected API response structure');
     }
 
-    return JSON.parse(jsonMatch[0]);
+    const content = data.content[0].text;
+    console.log('[LLM] Raw LLM response text:', content);
+    
+    // Parse JSON from the response - wrap in try/catch
+    let jsonMatch;
+    try {
+      jsonMatch = content.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) {
+        throw new Error('No JSON object found in response');
+      }
+      const parsed = JSON.parse(jsonMatch[0]);
+      console.log('[LLM] ✓ Successfully parsed JSON:', JSON.stringify(parsed));
+      return parsed;
+    } catch (parseError) {
+      console.error('[LLM] JSON parsing failed:', parseError.message);
+      console.error('[LLM] Attempted to parse:', jsonMatch ? jsonMatch[0] : 'NO MATCH FOUND');
+      console.error('[LLM] Full response was:', content);
+      throw new Error(`Failed to parse LLM response as JSON: ${parseError.message}`);
+    }
   } catch (error) {
-    console.error('[LLM] Error getting recommendation:', error);
+    console.error('[LLM] ❌ Error getting recommendation:', error.message);
+    console.log('[LLM] Falling back to mock recommendation logic');
     return getFallbackRecommendation(weather, season, places);
   }
 }

@@ -4,20 +4,26 @@ const WEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 export async function getWeather(lat, lng) {
   if (!WEATHER_API_KEY) {
-    console.warn('[Weather] OPENWEATHER_API_KEY not set, returning mock data');
+    console.warn('[Weather] ⚠️  OPENWEATHER_API_KEY not set in server/.env');
+    console.log('[Weather] Using mock weather data (You need to add OPENWEATHER_API_KEY)');
     return getMockWeather();
   }
 
   try {
-    const response = await fetch(
-      `${WEATHER_BASE_URL}?lat=${lat}&lon=${lng}&appid=${WEATHER_API_KEY}&units=metric`
-    );
+    console.log('[Weather] Fetching real weather from OpenWeatherMap...');
+    const url = `${WEATHER_BASE_URL}?lat=${lat}&lon=${lng}&appid=${WEATHER_API_KEY}&units=metric`;
+    console.log('[Weather] Request URL (key redacted):', url.replace(WEATHER_API_KEY, '***'));
+    
+    const response = await fetch(url);
 
     if (!response.ok) {
+      const errorBody = await response.text();
+      console.error('[Weather] API error:', response.status, errorBody);
       throw new Error(`Weather API error: ${response.status}`);
     }
 
     const data = await response.json();
+    console.log('[Weather] ✓ Real weather fetched:', JSON.stringify(data.weather[0]));
 
     return {
       condition: getWeatherCondition(data.weather[0].main, data.weather[0].description),
@@ -25,7 +31,8 @@ export async function getWeather(lat, lng) {
       description: data.weather[0].description,
     };
   } catch (error) {
-    console.error('[Weather] Error fetching weather:', error);
+    console.error('[Weather] ❌ Error fetching weather:', error.message);
+    console.log('[Weather] Falling back to mock weather data');
     return getMockWeather();
   }
 }
