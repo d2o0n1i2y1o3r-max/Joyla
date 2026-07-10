@@ -4,7 +4,7 @@ import { useTiltEffect } from '../hooks/useTiltEffect';
 import { useFavoritesStore } from '../store/useFavoritesStore';
 import { useLocationStore } from '../store/useLocationStore';
 
-const PlaceCard = ({ place, isNearest = false }) => {
+const PlaceCard = ({ place, isNearest = false, isFromApi = false }) => {
   const { t } = useTranslation();
   const { cardRef, transform } = useTiltEffect(15);
   const { addFavorite, removeFavorite, isFavorite } = useFavoritesStore();
@@ -125,11 +125,15 @@ const PlaceCard = ({ place, isNearest = false }) => {
             {isNearest && (
               <div className="badge badge-primary badge-sm">Nearest</div>
             )}
+            {isFromApi && (
+              <div className="badge badge-secondary badge-sm">API</div>
+            )}
             <div className="badge badge-neutral gap-1">
               {place.category === 'nature' && '🌳'}
               {place.category === 'historical' && '🏛️'}
               {place.category === 'restaurants' && '🍽️'}
               {place.category === 'entertainment' && '🎭'}
+              {place.category === 'wellness' && '♨️'}
             </div>
           </div>
         </figure>

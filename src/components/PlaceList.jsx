@@ -17,10 +17,11 @@ const calculateDistance = (lat1, lon1, lat2, lon2) => {
 };
 
 const PlaceList = () => {
-  const { filteredPlaces, isLoading } = usePlacesStore();
+  const { filteredPlaces, apiPlaces, isLoading } = usePlacesStore();
   const { location, manualCity } = useLocationStore();
 
   console.log('[PlaceList] Rendering with filteredPlaces:', filteredPlaces.map(p => p.name));
+  console.log('[PlaceList] API places:', apiPlaces.map(p => p.name));
 
   if (isLoading) {
     return (
@@ -30,7 +31,33 @@ const PlaceList = () => {
     );
   }
 
-  if (filteredPlaces.length === 0) {
+  const userLocation = location || manualCity;
+  
+  // Calculate distances for local places
+  const localPlacesWithDistance = filteredPlaces.map(place => ({
+    ...place,
+    distance: userLocation 
+      ? calculateDistance(userLocation.lat, userLocation.lng, place.lat, place.lng)
+      : Infinity
+  }));
+
+  const sortedLocalPlaces = [...localPlacesWithDistance].sort((a, b) => a.distance - b.distance);
+  const nearestPlaceId = sortedLocalPlaces[0]?.id;
+
+  // Calculate distances for API places
+  const apiPlacesWithDistance = apiPlaces.map(place => ({
+    ...place,
+    distance: userLocation 
+      ? calculateDistance(userLocation.lat, userLocation.lng, place.lat, place.lng)
+      : Infinity
+  }));
+
+  const sortedApiPlaces = [...apiPlacesWithDistance].sort((a, b) => a.distance - b.distance);
+
+  const hasLocalResults = sortedLocalPlaces.length > 0;
+  const hasApiResults = sortedApiPlaces.length > 0;
+
+  if (!hasLocalResults && !hasApiResults) {
     return (
       <div className="text-center py-12">
         <div className="text-6xl mb-4">🔍</div>
@@ -40,28 +67,47 @@ const PlaceList = () => {
     );
   }
 
-  const userLocation = location || manualCity;
-  
-  // Calculate distances and sort
-  const placesWithDistance = filteredPlaces.map(place => ({
-    ...place,
-    distance: userLocation 
-      ? calculateDistance(userLocation.lat, userLocation.lng, place.lat, place.lng)
-      : Infinity
-  }));
-
-  const sortedPlaces = [...placesWithDistance].sort((a, b) => a.distance - b.distance);
-  const nearestPlaceId = sortedPlaces[0]?.id;
-
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
-      {sortedPlaces.map((place) => (
-        <PlaceCard 
-          key={place.id} 
-          place={place} 
-          isNearest={place.id === nearestPlaceId}
-        />
-      ))}
+    <div className="flex flex-col gap-6 p-4">
+      {/* Local Results */}
+      {hasLocalResults && (
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {sortedLocalPlaces.map((place) => (
+              <PlaceCard 
+                key={place.id} 
+                place={place} 
+                isNearest={place.id === nearestPlaceId}
+              />
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* API Results Divider */}
+      {hasLocalResults && hasApiResults && (
+        <div className="flex items-center gap-4 py-2">
+          <div className="h-px bg-base-300 flex-1"></div>
+          <span className="text-sm text-base-content/50 font-medium">
+            Boshqa manbalardan topilgan joylar
+          </span>
+          <div className="h-px bg-base-300 flex-1"></div>
+        </div>
+      )}
+
+      {/* API Results */}
+      {hasApiResults && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {sortedApiPlaces.map((place) => (
+            <PlaceCard 
+              key={place.id} 
+              place={place} 
+              isNearest={false}
+              isFromApi={true}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

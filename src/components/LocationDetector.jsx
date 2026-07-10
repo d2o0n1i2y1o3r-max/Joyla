@@ -135,19 +135,27 @@ const LocationDetector = () => {
     setError(null);
     
     try {
-      // TODO: Integrate with a geocoding API (Google Maps Geocoding API or OpenStreetMap Nominatim)
-      // For now, this is a placeholder that would be connected to the backend proxy
-      // Example API call structure:
-      // const response = await fetch(`/api/geocode?query=${encodeURIComponent(globalCitySearch)}`);
-      // const data = await response.json();
-      // if (data.lat && data.lng) {
-      //   setManualCity({ lat: data.lat, lng: data.lng, name: globalCitySearch });
-      //   setLocation(null);
-      //   setSelectedCity('');
-      // }
+      const userLat = location?.lat || manualCity?.lat || 41.2995;
+      const userLng = location?.lng || manualCity?.lng || 69.2401;
       
-      // Placeholder: alert that this feature requires API integration
-      alert('Global city search requires geocoding API integration. This will be connected to the backend proxy.');
+      const response = await fetch(
+        `/api/search/geocode?query=${encodeURIComponent(globalCitySearch)}`
+      );
+      
+      if (!response.ok) {
+        throw new Error('Failed to search for city');
+      }
+      
+      const data = await response.json();
+      
+      if (data.lat && data.lng) {
+        setManualCity({ lat: data.lat, lng: data.lng, name: data.name });
+        setLocation(null);
+        setSelectedCity(data.name);
+        setGlobalCitySearch('');
+      } else {
+        setError('City not found');
+      }
     } catch (error) {
       console.error('Global city search error:', error);
       setError('Failed to search for city');
