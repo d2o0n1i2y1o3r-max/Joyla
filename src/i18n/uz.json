@@ -65,6 +65,35 @@
     "favorites": {
       "empty": "Sevimli joylar yo'q",
       "emptyMessage": "Sevimli joylarni qo'shish uchun yulduzcha belgisini bosing"
+    },
+    "about": {
+      "intro": {
+        "heading": "Biz haqimizda?",
+        "paragraph1": "<strong>Joylar</strong> — bu O'zbekiston bo'ylab qiziqarli joylarni kashf etish uchun yaratilgan ilova. Sizga yaqin tabiat obidalari, tarixiy joylar, restoranlar va dam olish maskanlarini topishda yordam beradi.",
+        "paragraph2": "Bizning maqsadimiz — odamlarga o'z shahrida yoki tashrif buyurgan joylarda qayerga borishni bilmasa, qiziqarli va unutilmas joylarni topish imkoniyatini berishdir. Ayniqsa, oilaviy dam olish, piknik va tabiat qo'yniga chiqishni yaxshi ko'radiganlar uchun."
+      },
+      "whyJoylar": {
+        "heading": "Nima uchun Joylar?",
+        "points": [
+          "Geolokatsiya orqali avtomatik ravishda yaqin joylarni topish",
+          "Turli kategoriyalar bo'yicha filtr: tabiat, tarixiy joylar, restoranlar va boshqalar",
+          "3D interaktiv kartalar bilan joylarni vizual ko'rish",
+          "Dachalar va oilaviy piknik joylari uchun maxsus bo'limlar",
+          "Sevimli joylarni saqlash imkoniyati",
+          "O'zbek, rus va ingliz tillarida qo'llab-quvvatlash"
+        ]
+      },
+      "whoBuiltIt": {
+        "heading": "Kim yaratdi?",
+        "paragraph": "Bu ilovani <strong>Doniyor</strong> yaratdi. O'zbekistonning go'zal joylarini odamlarga ko'rsatish va dam olish madaniyatini rivojlantirish maqsadida ishlab chiqildi."
+      },
+      "contact": {
+        "heading": "Aloqa",
+        "paragraph": "Savollaringiz yoki takliflaringiz bo'lsa, biz bilan bog'laning:",
+        "telegramBot": "Telegram Bot",
+        "email": "doniyor@joylar.uz"
+      },
+      "footer": "© 2024 Joylar. Barcha huquqlar himoyalangan."
     }
   }
 }

@@ -65,6 +65,35 @@
     "favorites": {
       "empty": "No favorite places",
       "emptyMessage": "Tap the star icon to add places to favorites"
+    },
+    "about": {
+      "intro": {
+        "heading": "About Us?",
+        "paragraph1": "<strong>Joylar</strong> is an app for discovering interesting places throughout Uzbekistan. It helps you find nature spots, historical places, restaurants, and recreation areas near you.",
+        "paragraph2": "Our goal is to give people the opportunity to find interesting and memorable places in their own city or when visiting new places. Especially for those who love family recreation, picnics, and nature outings."
+      },
+      "whyJoylar": {
+        "heading": "Why Joylar?",
+        "points": [
+          "Automatically find nearby places using geolocation",
+          "Filter by categories: nature, historical places, restaurants, and more",
+          "Visualize places with 3D interactive maps",
+          "Special sections for dachas and family picnic spots",
+          "Ability to save favorite places",
+          "Support in Uzbek, Russian, and English languages"
+        ]
+      },
+      "whoBuiltIt": {
+        "heading": "Who built it?",
+        "paragraph": "This app was created by <strong>Doniyor</strong>. It was developed to show people the beautiful places of Uzbekistan and promote the culture of recreation."
+      },
+      "contact": {
+        "heading": "Contact",
+        "paragraph": "If you have questions or suggestions, get in touch with us:",
+        "telegramBot": "Telegram Bot",
+        "email": "doniyor@joylar.uz"
+      },
+      "footer": "© 2024 Joylar. All rights reserved."
     }
   }
 }

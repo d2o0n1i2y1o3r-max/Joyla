@@ -9,7 +9,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.5,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Garden_Sim%C3%A9on-Louis_Desfontaines._Tunis_%282012%29.jpg/800px-Garden_Sim%C3%A9on-Louis_Desfontaines._Tunis_%282012%29.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/4/42/View_of_Tashkent_Botanical_Garden.jpg',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const mockPlaces = [
     lng: 69.2667,
     rating: 4.2,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Chorsu_Bazaar%2C_Tashkent.jpg/800px-Chorsu_Bazaar%2C_Tashkent.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Chorsu_bazaar_in_Tashkent%2C_Uzbekistan.jpg',
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const mockPlaces = [
     lng: 69.2667,
     rating: 4.6,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Chorsu_Bazaar%2C_Tashkent.jpg/800px-Chorsu_Bazaar%2C_Tashkent.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Chorsu_bazaar_in_Tashkent%2C_Uzbekistan.jpg',
   },
   {
     id: 6,
@@ -65,7 +65,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Amir_Timur_Square.jpg/800px-Amir_Timur_Square.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/27/Equestrian_statue_of_Timur_in_Tashkent_04.jpg/800px-Equestrian_statue_of_Timur_in_Tashkent_04.jpg',
   },
   // Tashkent - Restaurants
   {
@@ -77,7 +77,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.7,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Uzbek_plov.jpg/800px-Uzbek_plov.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Central_Asian_Plov_Centre_in_Tashkent.jpg',
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ export const mockPlaces = [
     lng: 69.2667,
     rating: 4.4,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Samarkand_registan_gur-e-amir_2007.jpg/800px-Samarkand_registan_gur-e-amir_2007.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Registan_Samarkand_Uzbekistan.JPG/800px-Registan_Samarkand_Uzbekistan.JPG',
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.5,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Tashkent_City_Park.jpg/800px-Tashkent_City_Park.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Tashkent_City_Park_at_night_2.jpg/800px-Tashkent_City_Park_at_night_2.jpg',
   },
   {
     id: 11,
@@ -122,7 +122,7 @@ export const mockPlaces = [
     lng: 69.2833,
     rating: 4.6,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Tashkent_amusement_park.jpg/800px-Tashkent_amusement_park.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Magic_city_Tashkent.jpg/800px-Magic_city_Tashkent.jpg',
   },
   // Samarkand - Historical
   {
@@ -134,7 +134,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Samarkand_registan_gur-e-amir_2007.jpg/800px-Samarkand_registan_gur-e-amir_2007.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Registan_Samarkand_Uzbekistan.JPG',
   },
   {
     id: 13,
@@ -145,7 +145,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.8,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Gur-e-Amir_mausoleum.jpg/800px-Gur-e-Amir_mausoleum.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/Exterior_View_through_Portico_of_Gur-e-Amir_Mausoleum_-_Samarkand_-_Uzbekistan_(7488485246).jpg',
   },
   {
     id: 14,
@@ -156,7 +156,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Shah-i-Zinda%2C_Samarkand_%288591695823%29.jpg/800px-Shah-i-Zinda%2C_Samarkand_%288591695823%29.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Shah-i-Zinda%2C_Samarkand_(Shohi-Zinda_majmuasi%2C_Samarqand%2C_%D0%A8%D0%B0%D1%85%D0%B8_%D0%97%D0%B8%D0%BD%D0%B4%D0%B0).jpg',
   },
   // Samarkand - Nature
   {
@@ -168,7 +168,7 @@ export const mockPlaces = [
     lng: 66.9597,
     rating: 4.3,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Garden_Sim%C3%A9on-Louis_Desfontaines._Tunis_%282012%29.jpg/800px-Garden_Sim%C3%A9on-Louis_Desfontaines._Tunis_%282012%29.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/4/42/View_of_Tashkent_Botanical_Garden.jpg',
   },
   // Bukhara - Historical
   {
@@ -180,7 +180,7 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.8,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bukhara_Kalon_Minaret.jpg/800px-Bukhara_Kalon_Minaret.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Kalyan_Minaret%2C_Bukhara_2.jpg/800px-Kalyan_Minaret%2C_Bukhara_2.jpg',
   },
   {
     id: 17,
@@ -191,7 +191,7 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.7,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ark_of_Bukhara.jpg/800px-Ark_of_Bukhara.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Ark_fortress_in_Bukhara.jpg',
   },
   {
     id: 18,
@@ -202,7 +202,7 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.6,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Lyab_i_Hauz.jpg/800px-Lyab_i_Hauz.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lyabi-Hovuz_and_Nadir_Divanbegi_Khanqah.jpg/800px-Lyabi-Hovuz_and_Nadir_Divanbegi_Khanqah.jpg',
   },
   // Bukhara - Restaurants
   {
@@ -226,7 +226,7 @@ export const mockPlaces = [
     lng: 60.3636,
     rating: 4.9,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Ichan_Kala_Gate%2C_Khiva.jpg/800px-Ichan_Kala_Gate%2C_Khiva.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Itchan_Kala_Gate%2C_Khiva.jpg/800px-Ichan_Kala_Gate%2C_Khiva.jpg',
   },
   {
     id: 21,
@@ -261,7 +261,7 @@ export const mockPlaces = [
     lng: 71.6726,
     rating: 4.3,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Tashkent_amusement_park.jpg/800px-Tashkent_amusement_park.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Spin_block_in_the_Valley_of_Legends_Park.jpg/800px-Spin_block_in_the_Valley_of_Legends_Park.jpg',
   },
   // Andijan - Historical
   {
@@ -285,7 +285,7 @@ export const mockPlaces = [
     lng: 65.7896,
     rating: 4.1,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Garden_Sim%C3%A9on-Louis_Desfontaines._Tunis_%282012%29.jpg/800px-Garden_Sim%C3%A9on-Louis_Desfontaines._Tunis_%282012%29.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/4/42/View_of_Tashkent_Botanical_Garden.jpg',
   },
   // Wellness - Sanatoriums and Health Resorts
   {
@@ -297,7 +297,7 @@ export const mockPlaces = [
     lng: 71.6667,
     rating: 4.6,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sanatorium_building.jpg/800px-Sanatorium_building.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Chortoq_sanatoriyasi_bog\'i.png/800px-Chortoq_sanatoriyasi_bog\'i.png',
   },
   {
     id: 27,
@@ -308,7 +308,7 @@ export const mockPlaces = [
     lng: 70.0333,
     rating: 4.4,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Chimgan_mountain_resort.jpg/800px-Chimgan_mountain_resort.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/%22Black_waterfall%22_Chimgan.JPG/800px-%22Black_waterfall%22_Chimgan.JPG',
   },
   {
     id: 28,
@@ -319,7 +319,7 @@ export const mockPlaces = [
     lng: 70.0833,
     rating: 4.5,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Mountain_health_resort.jpg/800px-Mountain_health_resort.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/%22Black_waterfall%22_Chimgan.JPG/800px-%22Black_waterfall%22_Chimgan.JPG',
   },
   {
     id: 29,
@@ -330,7 +330,7 @@ export const mockPlaces = [
     lng: 67.7333,
     rating: 4.3,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mountain_valley_spring.jpg/800px-Mountain_valley_spring.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Zaamin_National_Park%2C_Uzbekistan.jpg/800px-Zaamin_National_Park%2C_Uzbekistan.jpg',
   },
   {
     id: 30,
@@ -341,7 +341,7 @@ export const mockPlaces = [
     lng: 65.3667,
     rating: 4.2,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Desert_hot_spring.jpg/800px-Desert_hot_spring.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Zaamin_National_Park%2C_Uzbekistan.jpg/800px-Zaamin_National_Park%2C_Uzbekistan.jpg',
   },
   {
     id: 31,
@@ -352,6 +352,6 @@ export const mockPlaces = [
     lng: 64.4287,
     rating: 4.4,
     isOpen: true,
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Bukhara_thermal_spa.jpg/800px-Bukhara_thermal_spa.jpg',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lyabi-Hovuz_and_Nadir_Divanbegi_Khanqah.jpg/800px-Lyabi-Hovuz_and_Nadir_Divanbegi_Khanqah.jpg',
   },
 ];
